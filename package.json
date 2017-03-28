@@ -1,0 +1,26 @@
+{
+  "name": "tidyval",
+  "version": "1.0.0",
+  "description": "Validate, convert, conform, etc.",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "tape test/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tidysource/tidyval.git"
+  },
+  "keywords": [
+    "validation",
+    "convert"
+  ],
+  "author": "TidySource (Daniel Cobo)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tidysource/tidyval/issues"
+  },
+  "homepage": "https://github.com/tidysource/tidyval#readme"
+}
