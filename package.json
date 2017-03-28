@@ -25,5 +25,8 @@
   "homepage": "https://github.com/tidysource/tidyval#readme",
   "devDependencies": {
     "tidytest": "^1.0.1"
+  },
+  "dependencies": {
+    "tidytype": "^1.0.2"
   }
 }
