@@ -22,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/tidysource/tidyval/issues"
   },
-  "homepage": "https://github.com/tidysource/tidyval#readme"
+  "homepage": "https://github.com/tidysource/tidyval#readme",
+  "devDependencies": {
+    "tidytest": "^1.0.1"
+  }
 }
