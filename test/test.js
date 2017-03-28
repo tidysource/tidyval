@@ -47,7 +47,7 @@ test('to("object")', function(assert){
 });
 
 test('validate()', function(assert){
-	assert.plan(22);
+	assert.plan(23);
 	
 	assert.throws(function(){val(1).validate('boolean')});
 	assert.doesNotThrow(function(){val(true).validate('boolean')});
@@ -81,10 +81,13 @@ test('validate()', function(assert){
 	
 	assert.throws(function(){val(1).validate(['string','undefined'])});
 	assert.doesNotThrow(function(){val().validate(['string','undefined'])});
+	
+	assert.deepEqual(val([]).validate('array').to('array'), [], 
+					'validate() is chainable');
 });
 
 test('invalidate()', function(assert){
-	assert.plan(22);
+	assert.plan(23);
 	
 	assert.doesNotThrow(function(){val(1).invalidate('boolean')});
 	assert.throws(function(){val(true).invalidate('boolean')});
@@ -118,4 +121,7 @@ test('invalidate()', function(assert){
 	
 	assert.doesNotThrow(function(){val(1).invalidate(['string','undefined'])});
 	assert.throws(function(){val().invalidate(['string','undefined'])});
+	
+	assert.deepEqual(val().invalidate('array').to('array'), [],
+					'invalidate() is chainable');
 });
