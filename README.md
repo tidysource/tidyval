@@ -1,2 +1,3 @@
 # tidyval
-Get form values
+
+Utility for values: validate, invalidate, conform, etc.
