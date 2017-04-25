@@ -1,8 +1,8 @@
 'use strict';
 
-var tidytype = require('tidytype');
+const tidytype = require('tidytype');
 
-var to = function to(param){
+let to = function to(param){
 	if (param === 'array'){
 		if (typeof this.input === 'undefined'){
 			return [];
@@ -28,19 +28,18 @@ var to = function to(param){
 	}
 };
 
-var validate = function validate(param){
-	this.to('array');
-	var valType = tidytype(this.input);
+let validate = function validate(param){
+	let valType = tidytype(this.input);
 	if (param.indexOf(valType) === -1){
 		throw new Error('Expected: ' + param.toString() + '\n\r' +
 						'Actual: ' + tidytype(this.input));
 	}
-	
+
 	return this;
 };
 
-var invalidate = function invalidate(param){
-	var thrown = false;
+let invalidate = function invalidate(param){
+	let thrown = false;
 	try{
 		this.validate(param);
 	}
@@ -50,10 +49,10 @@ var invalidate = function invalidate(param){
 	finally{
 		if (!thrown){
 			throw new Error('Did not expect: ' + param.toString() + '\n\r' +
-							'Actual: ' + tidytype(this.input));	
+							'Actual: ' + tidytype(this.input));
 		}
-		
-		return this;	
+
+		return this;
 	}
 };
 
