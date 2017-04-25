@@ -1,6 +1,6 @@
 {
   "name": "tidyval",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Validate, convert, conform, etc.",
   "main": "index.js",
   "directories": {
