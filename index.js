@@ -22,7 +22,8 @@ let to = function to(param){
 			return this.input;
 		}
 		else{
-			throw new Error('Expected: object \n\r' +
+			throw new Error('\n\r' +
+							'Expected: object\n\r' +
 							'Actual: ' + tidytype(this.input));
 		}
 	}
